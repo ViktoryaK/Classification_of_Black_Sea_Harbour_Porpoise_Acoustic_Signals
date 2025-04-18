@@ -30,6 +30,7 @@ class VAE(nn.Module):
         return mu + eps * std
 
     def forward(self, x):
+        print(x.shape)
         encoded = self.encoder(x)
         mu, logvar = self.fc_mu(encoded), self.fc_logvar(encoded)
         z = self.reparameterize(mu, logvar)
@@ -54,7 +55,6 @@ class SiameseNetwork(nn.Module):
         return out1, out2
 
 
-# Contrastive loss
 class ContrastiveLoss(nn.Module):
     def __init__(self, margin=1.0):
         super(ContrastiveLoss, self).__init__()
@@ -114,3 +114,5 @@ def evaluate_siamese(model, val_loader):
 
     accuracy = correct / total * 100
     print(f"Model Accuracy: {accuracy:.2f}%")
+
+
