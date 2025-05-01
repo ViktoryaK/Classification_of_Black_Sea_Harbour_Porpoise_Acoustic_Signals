@@ -1,0 +1,16 @@
+numpy~=1.26.4
+scikit-learn~=1.6.1
+torch~=2.7.0
+matplotlib~=3.9.2
+tqdm~=4.67.1
+joblib
+xgboost~=3.0.0
+gdown~=5.2.0
+imbalanced-learn~=0.13.0
+pandas~=2.2.3
+umap-learn~=0.5.7
+fastdtw~=0.3.4
+scipy~=1.15.1
+shap~=0.47.2
+imbalanced-learn
+umap-learn
